@@ -1,5 +1,11 @@
 #!/bin/bash
 
+print "------------------------------------------"
+print "-              DNSBRUTE v2               -"
+print "-     Developed By: Pentester Jeff       -"
+print "-   https://github.com/pentesterjeff     -"
+print "------------------------------------------"
+
 import dns.resolver
 import sys
 
@@ -7,8 +13,8 @@ try:
 	domin = sys.argv[1]
 	name_arq = sys.argv[2]
 except:
-	print 'Error'
-	print 'Usage: dnsbrute.py <URL> <WORDLIST>'
+	print 'Incorrect Arguments'
+	print 'Usage: python brutedns.py <domain> <wordlist>'
 	sys.exit(1)
 try:
 	arq = open(name_arq)
@@ -25,3 +31,4 @@ for subdom in lines:
 			print domesub, result
 	except:
 		pass
+	
